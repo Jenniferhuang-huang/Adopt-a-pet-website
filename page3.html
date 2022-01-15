@@ -1,63 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Third Adoption Page</title>
-</head>
-<body>
-        <!-- Container to wrap everything -->
-<div id="container">
-        <!-- Brand of Website -->
-    <header>Adopt a Pet Today</header>
-        <!-- Main Navigator-->
-    <nav>
+    <!-- Link External Stylesheet-->
+    <link rel="Stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Container to wrap everything -->
+    <div id="container">
+      <!-- Brand of Website -->
+      <header>Adopt a Pet Today</header>
+      <!-- Main Navigator-->
+      <nav>
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="page2.html">Dogs for adoption</a></li>
-            <li>Gallery</li>
-            <li><a href="page3.html">Application form</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="page2.html">Dogs for adoption</a></li>
+          <li>Gallery</li>
+          <li><a href="page3.html">Application form</a></li>
         </ul>
-    </nav>
-        <!-- Main contant -->
-    <main>
+      </nav>
+      <!-- Main contant -->
+      <main>
         <h1>Start an adoption today!</h1>
-        <p>Thank you for your interest in the adoption of an animal from us. We would appreciate you answering the following questions 
-            so that we can best determine compatibility between you and the animal in question.</p>
-        <img src="images/dog.jpg" alt="Dog Photo" width="500">
+        <p>
+          Thank you for your interest in the adoption of an animal from us. We
+          would appreciate you answering the following questions so that we can
+          best determine compatibility between you and the animal in question.
+        </p>
 
         <form action="/signup" method="post">
-            <fieldset>
-                <legend>Adoption Application form</legend>
-                <label>Name of the pet you want to adopt</label><br>
-                <input tpye="text" name="name"><br><br>
-                <label>Enter your full name</label><br>
-                <input type="text" name="name"><br>
-                <label>Enter your email</label><br>
-                <input type="email" name="email"><br>
-                <label>Enter your phone</label><br>
-                <input type="tel" name="phone"><br><br>
-                <label>Select your gender</label><br>
-                <input type="radio" name="gender" value="male">Male
-                <input type="radio" name="gender" value="female">Female<br><br>
-                <label>How should we contact you?</label><br>
-                <select>
-                    <option>Email</option>
-                    <option>Phone</option>
-                </select><br><br>
-                <label>Tell us the reason you want to adopt an animal</label><br>
-                <textarea rows="5" cols="30"></textarea><br><br>
-                <input type="submit" value="sign up">
-                <input type="reset" value="reset">
-            </fieldset>
+          <fieldset>
+            <legend>Adoption Application form</legend>
+            <label>Name of the pet you want to adopt</label><br />
+            <input tpye="text" name="name" /><br /><br />
+            <label>Enter your full name</label><br />
+            <input type="text" name="name" /><br />
+            <label>Enter your email</label><br />
+            <input type="email" name="email" /><br />
+            <label>Enter your phone</label><br />
+            <input type="tel" name="phone" /><br /><br />
+            <label>Select your gender</label><br />
+            <input type="radio" name="gender" value="male" />Male
+            <input
+              type="radio"
+              name="gender"
+              value="female"
+            />Female<br /><br />
+            <label>How should we contact you?</label><br />
+            <select>
+              <option>Email</option>
+              <option>Phone</option></select
+            ><br /><br />
+            <label>Tell us the reason you want to adopt an animal</label><br />
+            <textarea rows="5" cols="30"></textarea><br /><br />
+            <input type="submit" value="sign up" />
+            <input type="reset" value="reset" />
+          </fieldset>
         </form>
-    </main>
-        <!-- End main contant -->
+      </main>
+      <!-- End main contant -->
 
-<footer>&copy; copyright2022</footer>
-
-</div>
-
-</body>
+      <footer>&copy; copyright2022</footer>
+    </div>
+  </body>
 </html>

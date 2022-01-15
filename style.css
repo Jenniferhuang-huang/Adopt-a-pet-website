@@ -1,0 +1,52 @@
+header {
+    background: url(images/dogs.jpg) 0-200px no-repeat;
+    height: 400px;
+    background-size: 1420px;
+    padding-top: 20px;
+    padding-left: 20px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 60px; 
+    color:rgb(56, 98, 221);
+}
+nav {
+    background-color: rgb(250, 198, 161);
+    height: 50px;
+    text-align: center;
+    padding-top: 2px;
+}
+li {
+    list-style-type: none;
+    display: inline;
+    padding: 0 20px;
+}
+li a{
+    text-decoration: none;
+}
+/* Pesudo Class - to style text links */
+li a:link { /*before click*/
+    color: #000;
+}
+li a:visited {
+    color: #495fa7;
+}
+li a:hover {
+    color: #333;
+}
+li a:active{
+    color: #753a30
+}
+main{
+    margin: 50px;
+}
+main h1{
+    color:rgb(54, 87, 197);
+    font-family: Arial, Helvetica, sans-serif;
+}
+footer{
+    height: 40px;
+    background-color: rgb(129,141,179);
+    text-align: center;
+    padding-top: 20px;
+    color:rgb(211,218,240);
+}
