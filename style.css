@@ -47,11 +47,6 @@ main p{
     font-family: 'Times New Roman', Times, serif;
     color:rgb(50, 75, 163);
 }
-main #album #photo img{
-    width: 400px;
-    height: 300px;
-    padding-left: 100px;
-}
 footer{
     height: 40px;
     background-color: rgb(129,141,179);
@@ -95,4 +90,16 @@ input[type="radio"] { /* attribute selector */
 input[type="submit"], input[type="reset"] {
     margin: 20px 0 10px 0;
     width: 100px;
+}
+/* page 4 */
+main #album #photo img{
+    width: 400px;
+    height: 300px;
+    padding-left: 5px;
+}
+main .dogcap{
+    display: block;
+    background-color: #495fa7;
+    color:red;
+    padding-left: 100px;
 }

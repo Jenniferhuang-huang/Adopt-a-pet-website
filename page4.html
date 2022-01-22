@@ -31,43 +31,112 @@
           adoption below. We ask everyone to complete an Adoption Application.
           Please visit Application Form page for more information.
         </p>
-
         <ul id="album">
-          <li id="photo">
+          <!--<li id="photo">
+            <caption class="dog">
+            Gigi
+          </caption>
             <img src="images/dog_pic1.jpg" alt="Dog picture 1" width="640" />
-          </li>
+          <desc class="desc">
+            Pretty lady
+          </desc>
+        </li>
           <li id="photo">
             <img src="images/dog_pic2.jpg" alt="Dog picture 2" width="640" />
           </li>
           <li id="photo">
             <img src="images/dog_pic3.jpg" alt="Dog picture 3" width="640" />
+            <caption class="dog1">yayyay</caption>
           </li>
           <li id="photo">
             <img src="images/dog_pic4.jpg" alt="Dog picture 4" width="640" />
+            <p>hihihi</p>
           </li>
           <li id="photo">
             <img src="images/dog_pic5.jpg" alt="Dog picture 5" width="640" />
+            <p>hihihi</p>
           </li>
           <li id="photo">
             <img src="images/dog_pic6.jpg" alt="Dog picture 6" width="640" />
+            <p>hihihi</p>
           </li>
           <li id="photo">
             <img src="images/dog_pic7.jpg" alt="Dog picture 7" width="640" />
+            <p>hihihi</p>
           </li>
           <li id="photo">
             <img src="images/dog_pic8.jpg" alt="Dog picture 8" width="640" />
+            <p>hihihi</p>
           </li>
           <li id="photo">
             <img src="images/dog_pic9.jpg" alt="Dog picture 9" width="640" />
+            <p>hihihi</p>
           </li>
           <li id="photo">
             <img src="images/dog_pic10.jpg" alt="Dog picture 10" width="640" />
-          </li>
+            <p>hihihi</p>
+          </li> -->
         </ul>
       </main>
       <!-- End main contant -->
 
       <footer>&copy; copyright2022</footer>
     </div>
+    <script>
+      var photos = [];
+      var fileNames = [];
+      var imageList = [];
+      var image;
+      var openList = "<li id = 'photo'>";
+      var closeList = "</li>";
+      var captions = [
+        "Gigi",
+        "Somi",
+        "Sugar",
+        "Bob",
+        "Luna",
+        "Paul",
+        "Kimi",
+        "Mochi",
+        "Dudu",
+        "Feifei",
+      ];
+      var captag = [];
+      var descriptions = [
+        "Lady",
+        "Gentleman",
+        "Lady",
+        "Lady",
+        "Lady",
+        "Lady",
+        "Gentleman",
+        "Gentleman",
+        "Gentleman",
+        "Gentleman",
+      ];
+      var desctag = [];
+
+      //Create a loop to create 6 images starting with index of 0
+      for (var i = 0; i < 10; i++) {
+        fileNames.push("dog_pic" + (i + 1));
+        photos.push(
+          "<img src = 'images/" +
+            fileNames[i] +
+            ".jpg' alt = 'Dog photo " +
+            (i + 1) +
+            "' width = 640px> "
+        );
+        captag.push("<caption class='dogcap'>" + captions[i] + "</caption>");
+        //assemble full image elements
+        desctag.push("<desc class='dogdesc'>" + descriptions[i] + "</desc>");
+        image = openList + captag[i] + photos[i] + desctag[i] + closeList;
+        imageList.push(image);
+      }
+      //Display all six images from the array in the album
+      document.getElementById("album").innerHTML = imageList.join(" ");
+    </script>
   </body>
 </html>
+
+<!--   var caption = [Gigi, Somi, Sugar, Bob, Luna, Paul, Kimi, Mochi, Dudu, Feifei]; + "<caption class='dog1'>"+caption [i] +
+          "</caption>" -->
