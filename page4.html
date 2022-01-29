@@ -24,6 +24,7 @@
       </nav>
       <!-- Main contant -->
       <main>
+        <div id="gallery">
         <h1>Dogs Gallery</h1>
         <p>
           If you are looking to add a wonderful pet to your family, you have
@@ -77,7 +78,13 @@
             <p>hihihi</p>
           </li> -->
         </ul>
-      </main>
+        <div id="infoBox">
+          <div id="title"></div>
+          <div id="info"></div>
+          <div id="closeInfo"></div>
+        </div>
+      </div>
+    </main>
       <!-- End main contant -->
 
       <footer>&copy; copyright2022</footer>
@@ -115,6 +122,12 @@
         "Gentleman",
       ];
       var desctag = [];
+      var texttag = [];
+      var infoText = ["a","b","c","d","e","f","g","h","i","j"];
+      var infoCloseText = "Click to close";
+      var openDesc = "<button id='dogdesc' onClick = 'displayInfo(" ;
+      var openDescClose=")'>";
+      var closeDesc = "</button>";
 
       //Create a loop to create 6 images starting with index of 0
       for (var i = 0; i < 10; i++) {
@@ -125,15 +138,26 @@
             ".jpg' alt = 'Dog photo " +
             (i + 1) +
             "' width = 640px> "
-        );
-        captag.push("<caption class='dogcap'>" + captions[i] + "</caption>");
-        //assemble full image elements
-        desctag.push("<desc class='dogdesc'>" + descriptions[i] + "</desc>");
+        );     //assemble full image elements
+        captag.push("<span id='dogcap'>" + captions[i] + "</span>");
+        desctag.push( openDesc + i + openDescClose +  descriptions[i] + closeDesc);
         image = openList + captag[i] + photos[i] + desctag[i] + closeList;
         imageList.push(image);
       }
       //Display all six images from the array in the album
       document.getElementById("album").innerHTML = imageList.join(" ");
+      
+      function displayInfo(i) {
+        document.getElementById("infoBox").style.visibility = 'visible';
+        document.getElementById("title").innerHTML = descriptions[i];
+        document.getElementById("info").innerHTML = infoText[i];
+        document.getElementById("closeInfo").innerHTML = infoCloseText;
+      }
+      var closeInfo = document.getElementById("closeInfo");
+      closeInfo.addEventListener("click",hideInfo);
+      function hideInfo() {
+      document.getElementById("infoBox").style.visibility = 'hidden';
+      }
     </script>
   </body>
 </html>
