@@ -123,7 +123,8 @@
       ];
       var desctag = [];
       var texttag = [];
-      var infoText = ["a","b","c","d","e","f","g","h","i","j"];
+      var infoText = ["age: 6 months old","age: 10 months old","age: 3 years old","age: 2 years old","age: 1 years old",
+      "age: 11 months old","age: 5 years old","age: 2 years old","age: 1 years old","age: 7 months old"];
       var infoCloseText = "Click to close";
       var openDesc = "<button id='dogdesc' onClick = 'displayInfo(" ;
       var openDescClose=")'>";
@@ -149,7 +150,7 @@
       
       function displayInfo(i) {
         document.getElementById("infoBox").style.visibility = 'visible';
-        document.getElementById("title").innerHTML = descriptions[i];
+        document.getElementById("title").innerHTML = captions[i];
         document.getElementById("info").innerHTML = infoText[i];
         document.getElementById("closeInfo").innerHTML = infoCloseText;
       }
