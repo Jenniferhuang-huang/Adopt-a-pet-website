@@ -91,6 +91,9 @@ input[type="submit"], input[type="reset"] {
     margin: 20px 0 10px 0;
     width: 100px;
 }
+#contactValue{
+    display: none;
+}
 /* page 4 */
 main #album #photo {
   display: inline-block;

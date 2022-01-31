@@ -38,10 +38,6 @@
             <input tpye="text" name="name" /><br /><br />
             <label>Enter your full name</label><br />
             <input type="text" name="name" /><br />
-            <label>Enter your email</label><br />
-            <input type="email" name="email" /><br />
-            <label>Enter your phone</label><br />
-            <input type="tel" name="phone" /><br /><br />
             <label>Select your gender</label><br />
             <input type="radio" name="gender" value="male" />Male
             <input
@@ -50,10 +46,13 @@
               value="female"
             />Female<br /><br />
             <label>How should we contact you?</label><br />
-            <select>
+            <select id="chooseContact">
+              <option>Choose one</option>
               <option>Email</option>
               <option>Phone</option></select
             ><br /><br />
+            <label id="contactInfo"></label><br />
+            <input id="contactValue" type="text" name="text" /><br />
             <label>Tell us the reason you want to adopt an animal</label><br />
             <textarea rows="5" cols="30"></textarea><br /><br />
             <input type="submit" value="sign up" />
@@ -65,5 +64,21 @@
 
       <footer>&copy; copyright2022</footer>
     </div>
+    <script>
+      var chooseContact = document.querySelector("select");
+      chooseContact.addEventListener("change", selectContact);
+      function selectContact() {
+        if (document.querySelector("select").value == "Email") {
+          document.getElementById("contactInfo").innerHTML = "Enter your email";
+          document.getElementById("contactInfo").style.display = "block";
+        } else if (document.querySelector("select").value == "Phone") {
+          document.getElementById("contactInfo").style.display = "block";
+          document.getElementById("contactInfo").innerHTML = "Enter your phone";
+        } else {
+          document.getElementById("contactInfo").style.display = "none";
+        }
+      }
+     
+    </script>
   </body>
 </html>
