@@ -78,7 +78,16 @@
           document.getElementById("contactInfo").style.display = "none";
         }
       }
-     
+      var feildvalue = true;
+      chooseContact.addEventListener("change", disableFeild);
+      function disableFeild() {
+        document.getElementById("contactValue").style.display = "none";
+        if (document.querySelector("select").value == "Choose one") {
+          document.getElementById("contactValue").style.display = "none";
+        } else {
+          document.getElementById("contactValue").style.display = "block";
+        }
+      }
     </script>
   </body>
 </html>
