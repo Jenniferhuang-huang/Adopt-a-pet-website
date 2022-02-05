@@ -7,6 +7,8 @@
     <title>Second Adoption Page</title>
     <!-- Link External Stylesheet-->
     <link rel="Stylesheet" href="style.css" />
+    <!-- jQuery Library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
   <body>
     <!-- Container to wrap everything -->
@@ -25,15 +27,15 @@
       <!-- Main contant -->
       <main>
         <div id="gallery">
-        <h1>Dogs Gallery</h1>
-        <p>
-          If you are looking to add a wonderful pet to your family, you have
-          come to the right place. Please view the dogs we have available for
-          adoption below. We ask everyone to complete an Adoption Application.
-          Please visit Application Form page for more information.
-        </p>
-        <ul id="album">
-          <!--<li id="photo">
+          <h1>Dogs Gallery</h1>
+          <p>
+            If you are looking to add a wonderful pet to your family, you have
+            come to the right place. Please view the dogs we have available for
+            adoption below. We ask everyone to complete an Adoption Application.
+            Please visit Application Form page for more information.
+          </p>
+          <ul id="album">
+            <!--<li id="photo">
             <caption class="dog">
             Gigi
           </caption>
@@ -77,89 +79,25 @@
             <img src="images/dog_pic10.jpg" alt="Dog picture 10" width="640" />
             <p>hihihi</p>
           </li> -->
-        </ul>
-        <div id="infoBox">
-          <div id="title"></div>
-          <div id="info"></div>
-          <div id="closeInfo"></div>
+          </ul>
+          <div id="infoBox">
+            <div id="title"></div>
+            <div id="info"></div>
+            <div id="closeInfo"></div>
+          </div>
+          <div class="backdrop"></div>
+
+          <div class="box">
+            <div class="close">x</div>
+          </div>
+
+          <script src="imagepage.js"></script>
         </div>
-      </div>
-    </main>
+      </main>
       <!-- End main contant -->
 
       <footer>&copy; copyright2022</footer>
     </div>
-    <script>
-      var photos = [];
-      var fileNames = [];
-      var imageList = [];
-      var image;
-      var openList = "<li id = 'photo'>";
-      var closeList = "</li>";
-      var captions = [
-        "Gigi",
-        "Somi",
-        "Sugar",
-        "Bob",
-        "Luna",
-        "Paul",
-        "Kimi",
-        "Mochi",
-        "Dudu",
-        "Feifei",
-      ];
-      var captag = [];
-      var descriptions = [
-        "Lady",
-        "Gentleman",
-        "Lady",
-        "Lady",
-        "Lady",
-        "Lady",
-        "Gentleman",
-        "Gentleman",
-        "Gentleman",
-        "Gentleman",
-      ];
-      var desctag = [];
-      var texttag = [];
-      var infoText = ["age: 6 months old","age: 10 months old","age: 3 years old","age: 2 years old","age: 1 years old",
-      "age: 11 months old","age: 5 years old","age: 2 years old","age: 1 years old","age: 7 months old"];
-      var infoCloseText = "Click to close";
-      var openDesc = "<button id='dogdesc' onClick = 'displayInfo(" ;
-      var openDescClose=")'>";
-      var closeDesc = "</button>";
-
-      //Create a loop to create 6 images starting with index of 0
-      for (var i = 0; i < 10; i++) {
-        fileNames.push("dog_pic" + (i + 1));
-        photos.push(
-          "<img src = 'images/" +
-            fileNames[i] +
-            ".jpg' alt = 'Dog photo " +
-            (i + 1) +
-            "' width = 640px> "
-        );     //assemble full image elements
-        captag.push("<span id='dogcap'>" + captions[i] + "</span>");
-        desctag.push( openDesc + i + openDescClose +  descriptions[i] + closeDesc);
-        image = openList + captag[i] + photos[i] + desctag[i] + closeList;
-        imageList.push(image);
-      }
-      //Display all six images from the array in the album
-      document.getElementById("album").innerHTML = imageList.join(" ");
-      
-      function displayInfo(i) {
-        document.getElementById("infoBox").style.visibility = 'visible';
-        document.getElementById("title").innerHTML = captions[i];
-        document.getElementById("info").innerHTML = infoText[i];
-        document.getElementById("closeInfo").innerHTML = infoCloseText;
-      }
-      var closeInfo = document.getElementById("closeInfo");
-      closeInfo.addEventListener("click",hideInfo);
-      function hideInfo() {
-      document.getElementById("infoBox").style.visibility = 'hidden';
-      }
-    </script>
   </body>
 </html>
 
